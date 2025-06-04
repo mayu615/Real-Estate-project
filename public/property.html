@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-br from-purple-100 via-blue-100 to-pink-100 min-h-screen font-sans text-gray-900"
+  >
+    <!-- Navbar -->
+    <header
+      class="bg-white/70 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3"
+      >
+        <h1 class="text-2xl font-bold text-blue-500">HomeFindr</h1>
+        <nav class="space-x-6 text-gray-700 hidden md:flex">
+          <a href="/" class="hover:text-blue-500">Home</a>
+          <a href="properties.html" class="hover:text-blue-500">Properties</a>
+          <a href="contact.html" class="hover:text-blue-500">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-36 px-4 max-w-4xl mx-auto animate-fade">
+      <div id="property-details" class="space-y-4">
+        <!-- Dynamic property details will be inserted here -->
+      </div>
+      <div class="mt-6">
+        <a href="properties.html" class="text-blue-500 hover:underline"
+          >← Back to Properties</a
+        >
+      </div>
+    </main>
+
+    <footer class="mt-20 py-6 text-center text-gray-500 text-sm">
+      © 2025 HomeFindr. All rights reserved.
+    </footer>
+
+    <script>
+      async function loadProperty() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const propertyId = parseInt(urlParams.get("id"));
+        
+        const res = await fetch(`/api/property/${propertyId}`);
+        if (!res.ok) throw new Error("Property not found.");
+        const property = await res.json();
+
+        const container = document.getElementById("property-details");
+
+        if (!property) {
+          container.innerHTML = `<p class="text-red-500 text-xl">Property not found.</p>`;
+          return;
+        }
+
+        container.innerHTML = `
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <img src="${property.image}" alt="${
+          property.title
+        }" class="w-full h-72 object-cover" />
+            <div class="p-6">
+              <h2 class="text-3xl font-bold text-gray-800">${
+                property.title
+              }</h2>
+              <p class="text-xl text-gray-700 mt-2">${property.price}</p>
+              <p class="text-gray-600">${property.beds} Beds · ${
+          property.baths
+        } Baths</p>
+              <p class="mt-4 text-gray-700">${
+                property.description || "No description available."
+              }</p>
+              <button onclick="saveToWishlist(${
+                property.id
+              })" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Save to Wishlist</button>
+            </div>
+          </div>
+        `;
+      }
+
+      function saveToWishlist(id) {
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        if (!wishlist.includes(id)) wishlist.push(id);
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        alert("Saved to wishlist!");
+      }
+
+      document.addEventListener("DOMContentLoaded", loadProperty);
+    </script>
+  </body>
+</html>

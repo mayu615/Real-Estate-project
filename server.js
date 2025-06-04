@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import bodyParser from 'body-parser';
+import fs from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -29,6 +30,33 @@ app.get('/contact', (req, res) => {
 app.get('/thank-you', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/thank-you.html'));
 });
+
+app.get('/property/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/property.html'));
+});
+
+
+app.get('/api/property/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const dataPath = path.join(__dirname, 'public', 'data', 'properties.json');
+
+  fs.readFile(dataPath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('❌ Error reading property data:', err);
+      return res.status(500).json({ error: 'Internal server error' });
+    }
+
+    const properties = JSON.parse(data);
+    const property = properties.find((p) => p.id === id);
+
+    if (!property) {
+      return res.status(404).json({ error: 'Property not found' });
+    }
+
+    res.json(property);
+  });
+});
+
 
 // Handle Contact Form Submission
 app.post('/contact', (req, res) => {

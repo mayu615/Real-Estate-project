@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Luxury Villa",
+    "price": "$750,000",
+    "beds": 4,
+    "baths": 3,
+    "image": "./assets/img/img1.jpg",
+    "lat": 34.0522,
+    "lng": -118.2437
+  },
+  {
+    "id": 2,
+    "title": "Modern Apartment",
+    "price": "$420,000",
+    "beds": 2,
+    "baths": 2,
+    "image": "./assets/img/img2.jpg",
+    "lat": 40.7128,
+    "lng": -74.006
+  },
+  {
+    "id": 3,
+    "title": "Cozy Cottage",
+    "price": "$320,000",
+    "beds": 3,
+    "baths": 2,
+    "image": "./assets/img/img3.jpg",
+    "lat": 37.7749,
+    "lng": -122.4194
+  },
+  {
+    "id": 4,
+    "title": "Countryside House",
+    "price": "$450,000",
+    "beds": 3,
+    "baths": 2,
+    "image": "./assets/img/img4.jpg",
+    "lat": 51.5074,
+    "lng": -0.1278
+  },
+  {
+    "id": 5,
+    "title": "Beachfront Bungalow",
+    "price": "$980,000",
+    "beds": 5,
+    "baths": 4,
+    "image": "./assets/img/img5.jpg",
+    "lat": 25.7617,
+    "lng": -80.1918
+  },
+  {
+    "id": 6,
+    "title": "Urban Loft",
+    "price": "$620,000",
+    "beds": 3,
+    "baths": 2,
+    "image": "./assets/img/img6.jpg",
+    "lat": 41.8781,
+    "lng": -87.6298
+  }
+]
