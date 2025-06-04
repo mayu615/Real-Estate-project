@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | HomeFindr</title>
+
+    <meta
+      name="description"
+      content="Contact HomeFindr for support, questions, or to speak with an agent. We're here to help you find your next home."
+    />
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      input.border-red-500,
+      textarea.border-red-500 {
+        border-width: 2px;
+      }
+    </style>
+
+    <script defer>
+      function toggleDrawer() {
+        document.getElementById("drawer").classList.toggle("translate-x-full");
+      }
+    </script>
+  </head>
+
+  <body
+    class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 min-h-screen font-sans text-white"
+  >
+    <!-- Navbar -->
+    <header
+      class="bg-gray-950/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3"
+      >
+        <h1 class="text-2xl font-bold text-blue-400">HomeFindr</h1>
+        <button
+          onclick="toggleDrawer()"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav class="hidden md:flex space-x-6 text-gray-200">
+          <a href="/" class="hover:text-blue-400">Home</a>
+          <a href="properties.html" class="hover:text-blue-400">Properties</a>
+          <a href="contact.html" class="text-blue-400 font-semibold">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div
+      id="drawer"
+      class="fixed top-0 right-0 w-64 bg-gray-900 h-full shadow-lg transform translate-x-full transition-transform duration-300 z-50 text-white"
+    >
+      <div class="flex justify-end p-4">
+        <button onclick="toggleDrawer()" aria-label="Close menu">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col px-6 space-y-4">
+        <a href="/" class="hover:text-blue-400">Home</a>
+        <a href="properties.html" class="hover:text-blue-400">Properties</a>
+        <a href="contact.html" class="text-blue-400 font-semibold">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Hero -->
+    <div
+      class="relative mt-24 min-h-[95vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white"
+      style="background-image: url('./assets/img/house1.jpg')"
+    >
+      <div class="absolute inset-0 bg-black opacity-40 z-0"></div>
+      <div class="relative z-10 p-10 max-w-2xl text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+        <p class="text-lg md:text-xl">
+          Need help or want to connect with our team? We're here for you.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <section class="my-16 px-4 md:px-16">
+      <div
+        class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 rounded-lg py-16"
+      >
+        <div
+          class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center"
+        >
+          <div>
+            <div class="flex justify-center mb-4 text-blue-400">
+              <i class="fas fa-phone-alt fa-2x"></i>
+            </div>
+            <p class="text-blue-300 font-semibold text-lg">
+              <a href="tel:8447597734">844-759-7734</a>
+            </p>
+            <p class="text-sm text-gray-400 mt-2">
+              8 AM – 5 PM PST, 7 days a week
+            </p>
+          </div>
+
+          <div>
+            <div class="flex justify-center mb-4 text-blue-400">
+              <i class="fas fa-envelope fa-2x"></i>
+            </div>
+            <p class="text-blue-300 font-semibold text-lg">Message Us</p>
+            <p class="text-sm text-gray-400 mt-2">
+              Questions or feedback? We’ll respond quickly.
+            </p>
+          </div>
+
+          <div>
+            <div class="flex justify-center mb-4 text-blue-400">
+              <i class="fas fa-comment-dots fa-2x"></i>
+            </div>
+            <p class="text-blue-300 font-semibold text-lg">Social Media</p>
+            <div
+              class="flex justify-center mt-2 space-x-4 text-gray-400 text-xl"
+            >
+              <a href="#"
+                ><i class="fab fa-facebook-f hover:text-blue-400"></i
+              ></a>
+              <a href="#"><i class="fab fa-twitter hover:text-blue-400"></i></a>
+              <a href="#"
+                ><i class="fab fa-instagram hover:text-pink-400"></i
+              ></a>
+              <a href="#"
+                ><i class="fab fa-linkedin-in hover:text-blue-400"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="px-4 md:px-16 mt-12 mb-20">
+      <div class="max-w-2xl mx-auto bg-gray-800 rounded-lg shadow-lg p-8">
+        <h2 class="text-2xl font-bold text-center text-blue-400 mb-6">
+          Send Us a Message
+        </h2>
+        <form action="/contact" method="POST" class="space-y-6">
+          <div>
+            <label for="name" class="block mb-1 text-sm font-medium"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+          <div>
+            <label for="email" class="block mb-1 text-sm font-medium"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+          <div>
+            <label for="message" class="block mb-1 text-sm font-medium"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="w-full p-3 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full py-3 bg-blue-500 hover:bg-blue-600 rounded text-white font-semibold transition duration-300"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gray-950 backdrop-blur-md text-white py-6 mt-16 rounded-t-lg"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm"
+      >
+        <p>&copy; 2025 HomeFindr. All rights reserved.</p>
+        <div class="flex space-x-4 mt-2 md:mt-0">
+          <a href="#" class="hover:text-blue-400">Privacy Policy</a>
+          <a href="#" class="hover:text-blue-400">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", function (e) {
+          let valid = true;
+          const name = form.name.value.trim();
+          const email = form.email.value.trim();
+          const message = form.message.value.trim();
+
+          // Clear any previous error highlights
+          form.querySelectorAll("input, textarea").forEach((input) => {
+            input.classList.remove("border-red-500");
+          });
+
+          // Name validation
+          if (name.length < 2) {
+            highlightError("name");
+            valid = false;
+          }
+
+          // Email validation (basic regex)
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email)) {
+            highlightError("email");
+            valid = false;
+          }
+
+          // Message validation
+          if (message.length < 10) {
+            highlightError("message");
+            valid = false;
+          }
+
+          if (!valid) {
+            e.preventDefault(); // Stop form from submitting
+            alert("Please fill out all fields correctly.");
+          }
+
+          function highlightError(fieldId) {
+            const field = document.getElementById(fieldId);
+            field.classList.add("border", "border-red-500");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Hero Section -->
+   <!-- Hero Section with Background Image -->
+<section
+  class="min-h-screen flex flex-col justify-center items-center text-center p-8 bg-cover bg-center relative"
+  style="background-image: url('./assets/img/house1.jpg');"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+
+  <!-- Content -->
+  <div class="relative z-10">
+    <h1 class="text-4xl md:text-6xl font-semibold text-white mb-4 animate-fade-in">
+      Find Your Dream Home
+    </h1>
+    <p class="text-lg md:text-xl text-white mb-6 animate-fade-in">
+      Discover the perfect property tailored to your lifestyle.
+    </p>
+    <a
+      href="properties.html"
+      class="px-6 py-3 bg-blue-600 text-white rounded-xl shadow-md hover:bg-blue-700 transition-all"
+    >
+      Browse properties
+    </a>
+  </div>
+</section>
+
+
+    <!-- Featured Listings -->
+    <section id="featured" class="py-16 px-8 bg-gray-100">
+      <h2 class="text-3xl font-bold text-center mb-12">Featured Listings</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition-all">
+          <img src="./assets/img/house1.jpg" alt="House" class="rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Modern Villa</h3>
+          <p class="text-gray-600">$500,000 · 3 Bed · 2 Bath</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition-all">
+          <img src="./assets/img/house2.jpg" alt="Apartment" class="rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold mb-2">City Apartment</h3>
+          <p class="text-gray-600">$320,000 · 2 Bed · 1 Bath</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-4 hover:shadow-lg transition-all">
+          <img src="./assets/img/house3.jpg" alt="Home" class="rounded-lg mb-4" />
+          <h3 class="text-xl font-semibold mb-2">Cozy Suburb Home</h3>
+          <p class="text-gray-600">$420,000 · 4 Bed · 3 Bath</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="py-16 px-8">
+      <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+      <div class="grid gap-8 md:grid-cols-3 text-center">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h4 class="text-xl font-semibold mb-2">Prime Locations</h4>
+          <p class="text-gray-600">Access the best areas in the city and suburbs.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h4 class="text-xl font-semibold mb-2">Trusted Agents</h4>
+          <p class="text-gray-600">Experienced professionals ready to help you.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h4 class="text-xl font-semibold mb-2">Easy Financing</h4>
+          <p class="text-gray-600">Flexible mortgage options tailored for you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-blue-600 text-white py-16 px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Make a Move?</h2>
+      <p class="mb-6">Schedule a visit or talk to one of our experts today.</p>
+      <a
+        href="contact.html"
+        class="inline-block bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold shadow hover:bg-gray-100 transition"
+      >
+        Contact Us
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+      <p>&copy; 2025 Real Estate Co. All rights reserved.</p>
+    </footer>
+
+    <script src="/src/script.js"></script>
+  </body>
+</html>
