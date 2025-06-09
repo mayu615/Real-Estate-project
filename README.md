@@ -1,15 +1,60 @@
-# 🏠 Real Estate Project
+# 🏡 Real Estate Website
 
-A modern responsive real estate landing page built with:
+A clean, modern, and responsive Real Estate Website built using **HTML, CSS, and JavaScript**. This project showcases a professional-looking frontend design for property listings, contact forms, and services.
 
-- HTML + Tailwind CSS
-- Node.js + Express
-- Contact form with validation
-- Git integration
+---
 
-## 🚀 Run Locally
+## 🔗 Live Demo
 
-```bash
-npm install
-node server.js
-```
+🚀 [Visit the Live Site](https://real-estate-js.netlify.app/)
+
+---
+
+## 📸 Screenshots
+
+### 💻 Desktop View
+
+![Desktop View](screenshot/img1.png)
+
+### 📱 Mobile View
+
+![Mobile View](screenshot/img2.png)
+
+---
+
+## ⚙️ Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- Netlify (Deployment)
+
+---
+
+## ✨ Features
+
+- 📱 Fully responsive layout
+- 🏠 Property cards with images and pricing
+- 📨 Functional contact form
+- 📌 Clean and modern UI
+- ⚡ Fast and lightweight
+
+---
+
+---
+
+## 📬 Connect With Me
+
+- [LinkedIn](https://www.linkedin.com/in/your-link)  </br>
+- [GitHub](https://github.com/mayu615)
+
+---
+
+## 📄 License
+
+This project is intended for educational/demo purposes.
+
+---
+
+
+
