@@ -12,11 +12,11 @@ A clean, modern, and responsive Real Estate Website built using **HTML, CSS, and
 
 ## 📸 Screenshots
 
-### 💻 Desktop View
+### 💻 First View
 
 ![Desktop View](screenshot/img1.png)
 
-### 📱 Mobile View
+### 📱 Second View
 
 ![Mobile View](screenshot/img2.png)
 
@@ -57,4 +57,4 @@ This project is intended for educational/demo purposes.
 ---
 
 
-
+made with 💗 @Mayuri Chatap
